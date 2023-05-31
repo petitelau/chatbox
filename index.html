@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/style.css">
+     <script type="module" src="/js/chat.js"> </script>
+    <title>Chatbox</title>
+    
+</head>
+<body>
+    <form id="submit-question" class="outside-container">
+        <div class="db-box">
+            <img src="./img/pinecone-logo.png" class="db-box__db--logo"/>
+            <input id="input-db-index"  type="text" class="db-box__db" placeholder="Db Index" value="article-index"/>
+            <input id="input-db-namespace" type="text" class="db-box__db" placeholder="Db namespace" value="laura-namespace"/>
+        </div>
+        <div class="inside-container">
+            <ul class="chatbox">
+                <p class="chatbox--loading-msg">Enter your question</p>
+            </ul>
+            <div class="question-box">
+                <input type="text" class="question-box__input" />
+                <button class="question-box__btn" > > </button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

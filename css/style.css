@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.outside-container {
+  background-color: #9c4841;
+  padding: 3rem;
+  max-height: 90vh; }
+  .outside-container .db-box {
+    display: flex;
+    justify-content: end;
+    height: 5rem; }
+    .outside-container .db-box__db {
+      width: 25%;
+      height: 3rem;
+      margin: 0rem 0rem 0rem 2rem;
+      padding: 1rem;
+      color: #58302b; }
+      .outside-container .db-box__db--logo {
+        margin-bottom: 1rem; }
+  .outside-container .inside-container {
+    background-color: rgba(218, 139, 49, 0.8);
+    padding: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8); }
+    .outside-container .inside-container .chatbox {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: scroll;
+      max-height: 50vh;
+      position: relative;
+      font-size: 1.6rem; }
+      .outside-container .inside-container .chatbox--loading-msg {
+        background: #aa81b1;
+        height: 4rem;
+        width: 100%;
+        position: sticky;
+        top: 0%;
+        color: #e5e5e6;
+        text-align: center;
+        padding: 0.5rem; }
+      .outside-container .inside-container .chatbox--loading-msg:hover {
+        opacity: 0; }
+      .outside-container .inside-container .chatbox li:nth-child(even) {
+        background: #f5e0c8;
+        padding: 1rem; }
+      .outside-container .inside-container .chatbox li:nth-child(odd) {
+        background: #f1d4b3;
+        padding: 1rem; }
+        .outside-container .inside-container .chatbox li:nth-child(odd) span {
+          display: inline-block;
+          text-align: end;
+          width: 100%; }
+  .outside-container .question-box {
+    padding: 3rem 0 1rem 0;
+    display: flex;
+    justify-content: end; }
+    .outside-container .question-box__input {
+      width: 90%;
+      height: 3rem;
+      padding: 1rem;
+      font-size: 1.6rem;
+      color: #9c4841; }
+    .outside-container .question-box__btn {
+      width: 10%;
+      height: 3rem;
+      background-color: #774e7e;
+      color: #eee;
+      cursor: pointer; }

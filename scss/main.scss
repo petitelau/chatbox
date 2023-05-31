@@ -1,0 +1,118 @@
+$color-brown-dark : #58302b;
+$color-yellow-dark: #da8b31;
+$color-red: #9c4841;
+$color-violet: #aa81b1;
+$color-gray: #e5e5e6;
+$color-gray-darker: #7f8083;
+
+*,
+*::after,
+*::before {
+  margin:0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box;
+
+}
+
+.outside-container {
+  background-color: $color-red;
+  padding: 3rem;
+  max-height: 90vh;
+  .db-box {
+    display: flex;
+    justify-content: end;
+    height: 5rem;
+
+    &__db {
+      width: 25%;
+      height: 3rem;
+      margin: 0rem 0rem 0rem 2rem;
+      padding: 1rem;
+      color: $color-brown-dark;
+      &--logo {
+        margin-bottom: 1rem;
+      }
+    }
+
+  }
+  .inside-container {
+    background-color: rgba($color-yellow-dark, 0.8);
+    padding: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.8);
+
+    .chatbox {
+      list-style-type: none;
+      display:grid;
+      grid-template-columns: 1fr;
+      overflow:scroll;
+      max-height: 50vh;
+      position: relative;
+      font-size: 1.6rem;
+
+      &--loading-msg {
+        background: $color-violet;
+        height: 4rem;
+        width:100%;
+        position: sticky;
+        top: 0%;
+        color: $color-gray;
+        text-align: center;
+        padding: 0.5rem;
+      }
+      &--loading-msg:hover {
+        opacity: 0;
+      }
+
+      li:nth-child(even){
+        background: lighten($color-yellow-dark,35%);
+        padding: 1rem;
+      }
+      li:nth-child(odd){
+        background: lighten($color-yellow-dark, 30%);
+        padding: 1rem;
+        & span {
+          display: inline-block;
+          text-align: end;
+          width:100%;
+        }
+      }
+    }
+  }
+  .question-box {
+    padding: 3rem 0 1rem 0;
+    display: flex;
+    justify-content: end;
+    &__input {
+      width: 90%;
+      height: 3rem;
+      padding: 1rem;
+      font-size: 1.6rem;
+      color: $color_red;
+    }
+    &__btn {
+      width: 10%;
+      height: 3rem;
+      background-color: darken($color-violet,20%);
+      color: #eee;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
